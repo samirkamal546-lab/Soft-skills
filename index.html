@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EsiCareerBridge - Soft Skills</title>
+    <style>
+        body { 
+            margin:0; 
+            font-family: Arial, sans-serif; 
+            background-color: #f9f9f9;
+        }
+        header {
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:15px 40px;
+            background:#ffffff;
+            box-shadow:0 2px 6px rgba(0,0,0,0.1);
+        }
+        .logo img {
+            width:50px;
+            height:50px;
+            object-fit:cover;
+        }
+        nav a {
+            margin:0 15px;
+            text-decoration:none;
+            color:#333;
+            font-size:18px;
+        }
+        .btn-login {
+            background:#e74c3c;
+            color:white;
+            padding:10px 20px;
+            border-radius:8px;
+            text-decoration: none;
+        }
+        .hero {
+            background: linear-gradient(to right, #1e3c72, #2a72b8);
+            color:white;
+            text-align:center;
+            padding:120px 20px;
+        }
+        .hero h1 { font-size:48px; margin-bottom:20px; }
+        .hero p { font-size:22px; max-width:800px; margin:auto; }
+        .btn-primary {
+            padding:15px 25px;
+            border-radius:8px;
+            font-size:20px;
+            margin:15px;
+            display: inline-block;
+            text-decoration: none;
+            background:#e74c3c; 
+            color:white;
+        }
+        
+        /* Styles pour la section Soft Skills */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+            --success-color: #2ecc71;
+        }
+        
+        .soft-skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .soft-skills-container h1, .soft-skills-container h2, .soft-skills-container h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .soft-skills-container h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .soft-skills-container h2 {
+            font-size: 1.8rem;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-color);
+        }
+        
+        .soft-skills-container h3 {
+            font-size: 1.4rem;
+            margin-top: 25px;
+            color: var(--secondary-color);
+        }
+        
+        .plan-section {
+            margin-top: 40px;
+        }
+        
+        .week-section {
+            margin-bottom: 30px;
+            border: 1px solid var(--light-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .week-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+        }
+        
+        .week-objective {
+            background-color: var(--light-color);
+            padding: 15px;
+            font-style: italic;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #e9f7fe;
+        }
+        
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .soft-skills-container {
+                padding: 15px;
+            }
+            
+            .soft-skills-container h1 {
+                font-size: 2rem;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            header {
+                flex-direction: column;
+                padding: 15px 20px;
+            }
+            
+            nav {
+                margin: 15px 0;
+                text-align: center;
+            }
+            
+            nav a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <!-- Logo placeholder -->
+        <div style="width:50px; height:50px; background:#1e3c72; color:white; display:flex; align-items:center; justify-content:center; font-weight:bold;">ECB</div>
+    </div>
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Optimisation LinkedIn</a>
+        <a href="#">Recherche de Stage</a>
+        <a href="#soft-skills">Soft Skills</a>
+        <a href="#">Contact</a>
+    </nav>
+    <a class="btn-login" href="#">Se connecter</a>
+</header>
+
+<section class="hero">
+    <h1>Votre Pont vers l'Excellence Professionnelle</h1>
+    <p>Notre plateforme transforme votre recherche de stage en parcours de développement complet, intégrant les soft skills directement dans votre préparation.</p>
+    <a href="#soft-skills" class="btn-primary">Commencer mon parcours</a>
+</section>
+
+<section id="soft-skills" class="soft-skills-container">
+    <h1>Plan de Développement des Compétences</h1>
+    
+    <div class="plan-section">
+        <div class="week-section">
+            <div class="week-header">
+                <h3>SEMAINE 1 : Gestion de soi et pensée critique</h3>
+            </div>
+            <div class="week-objective">
+                <p>Objectif : Développer le contrôle de ton temps, de tes pensées et de ton processus d'apprentissage.</p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Jour</th>
+                        <th>Compétence</th>
+                        <th>Activité</th>
+                        <th>Ressources</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lundi</td>
+                        <td>Gestion du temps</td>
+                        <td>Créer un planning hebdomadaire avec blocs de temps pour les études, projets et temps personnel</td>
+                        <td>Application de planification (Google Calendar, Notion)</td>
+                    </tr>
+                    <tr>
+                        <td>Mardi</td>
+                        <td>Auto-évaluation</td>
+                        <td>Identifier tes forces et faiblesses académiques et personnelles</td>
+                        <td>Test d'auto-évaluation, journal de réflexion</td>
+                    </tr>
+                    <tr>
+                        <td>Mercredi</td>
+                        <td>Pensée critique</td>
+                        <td>Analyser un problème complexe et identifier au moins 3 solutions possibles</td>
+                        <td>Études de cas, problèmes de logique</td>
+                    </tr>
+                    <tr>
+                        <td>Jeudi</td>
+                        <td>Résolution de problèmes</td>
+                        <td>Appliquer une méthodologie structurée à un défi technique</td>
+                        <td>Méthodologie de résolution de problèmes, exercices pratiques</td>
+                    </tr>
+                    <tr>
+                        <td>Vendredi</td>
+                        <td>Rétroaction</td>
+                        <td>Demander et recevoir des feedbacks constructifs sur ton travail</td>
+                        <td>Formulaire de feedback, séance de revue par les pairs</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="week-section">
+            <div class="week-header">
+                <h3>SEMAINE 2 : Communication et collaboration</h3>
+            </div>
+            <div class="week-objective">
+                <p>Objectif : Améliorer tes capacités à communiquer clairement et à travailler efficacement en équipe.</p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Jour</th>
+                        <th>Compétence</th>
+                        <th>Activité</th>
+                        <th>Ressources</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lundi</td>
+                        <td>Communication écrite</td>
+                        <td>Rédiger un email professionnel clair et concis</td>
+                        <td>Modèles d'emails professionnels, guide de rédaction</td>
+                    </tr>
+                    <tr>
+                        <td>Mardi</td>
+                        <td>Communication verbale</td>
+                        <td>Présenter une idée en 3 minutes avec support visuel</td>
+                        <td>Techniques de présentation, outils de création de slides</td>
+                    </tr>
+                    <tr>
+                        <td>Mercredi</td>
+                        <td>Écoute active</td>
+                        <td>Pratiquer l'écoute active dans une conversation de groupe</td>
+                        <td>Exercices d'écoute active, jeux de rôle</td>
+                    </tr>
+                    <tr>
+                        <td>Jeudi</td>
+                        <td>Travail d'équipe</td>
+                        <td>Participer à un projet collaboratif avec répartition des tâches</td>
+                        <td>Outils de collaboration (Trello, Slack), méthodologies agiles</td>
+                    </tr>
+                    <tr>
+                        <td>Vendredi</td>
+                        <td>Gestion de conflits</td>
+                        <td>Identifier et résoudre un désaccord dans un contexte professionnel</td>
+                        <td>Études de cas, techniques de médiation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="week-section">
+            <div class="week-header">
+                <h3>SEMAINE 3 : Adaptabilité et innovation</h3>
+            </div>
+            <div class="week-objective">
+                <p>Objectif : Développer ta capacité à t'adapter au changement et à proposer des solutions innovantes.</p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Jour</th>
+                        <th>Compétence</th>
+                        <th>Activité</th>
+                        <th>Ressources</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lundi</td>
+                        <td>Flexibilité cognitive</td>
+                        <td>Résoudre un problème sous au moins deux angles différents</td>
+                        <td>Exercices de pensée latérale, jeux de créativité</td>
+                    </tr>
+                    <tr>
+                        <td>Mardi</td>
+                        <td>Apprentissage continu</td>
+                        <td>Identifier et commencer à apprendre une nouvelle compétence technique</td>
+                        <td>Plateformes d'apprentissage en ligne, tutoriels</td>
+                    </tr>
+                    <tr>
+                        <td>Mercredi</td>
+                        <td>Gestion du changement</td>
+                        <td>Analyser comment tu réagis face à un changement imprévu</td>
+                        <td>Questionnaire d'adaptabilité, réflexion personnelle</td>
+                    </tr>
+                    <tr>
+                        <td>Jeudi</td>
+                        <td>Pensée innovante</td>
+                        <td>Proposer une amélioration innovante pour un processus existant</td>
+                        <td>Techniques de brainstorming, design thinking</td>
+                    </tr>
+                    <tr>
+                        <td>Vendredi</td>
+                        <td>Résilience</td>
+                        <td>Identifier des stratégies pour rebondir après un échec</td>
+                        <td>Histoires de résilience, techniques de développement personnel</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>Plateforme collaborative pour aider les étudiants à trouver les meilleurs stages</p>
+    <p>© 2023 EsiCareerBridge. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
