@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EsiCareerBridge - Soft Skills</title>
+    <title>EsiCareerBridge - Avis et Suggestions</title>
     <style>
         body { 
             margin:0; 
-            font-family: Arial, sans-serif; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
         }
         header {
             display:flex;
@@ -55,17 +57,14 @@
             color:white;
         }
         
-        /* Styles pour la section Soft Skills */
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #34495e;
-            --success-color: #2ecc71;
+        /* Styles pour la section Avis et Suggestions */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
         
-        .soft-skills-container {
+        .avis-container {
             max-width: 1200px;
             margin: 0 auto;
             background-color: white;
@@ -74,147 +73,56 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
         
-        .soft-skills-container h1, .soft-skills-container h2, .soft-skills-container h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        .soft-skills-container h1 {
-            font-size: 2.5rem;
+        .section-title {
             text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid var(--secondary-color);
+            margin-bottom: 40px;
+            color: #1e3c72;
+            font-size: 36px;
         }
         
-        .soft-skills-container h2 {
+        .company-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .company-item {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .company-item:last-child {
+            border-bottom: none;
+        }
+        
+        .company-item h2 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
             font-size: 1.8rem;
-            margin-top: 30px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--light-color);
         }
         
-        .soft-skills-container h3 {
-            font-size: 1.4rem;
-            margin-top: 25px;
-            color: var(--secondary-color);
+        .company-logo {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
-        .plan-section {
-            margin-top: 40px;
-        }
-        
-        .week-section {
-            margin-bottom: 30px;
-            border: 1px solid var(--light-color);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .week-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px;
-        }
-        
-        .week-objective {
-            background-color: var(--light-color);
-            padding: 15px;
-            font-style: italic;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        th {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        tr:hover {
-            background-color: #e9f7fe;
-        }
-        
-        /* Styles pour la section Compétences Clés */
-        .key-skills-container {
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 2px solid var(--secondary-color);
-        }
-        
-        .intro {
-            font-size: 1.1rem;
-            background-color: var(--light-color);
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        
-        .skill-section {
-            margin-bottom: 30px;
-            padding: 20px;
-            border-left: 4px solid var(--secondary-color);
+        .quote {
             background-color: #f8f9fa;
+            border-left: 4px solid #e74c3c;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
             border-radius: 0 8px 8px 0;
         }
         
-        .skill-title {
+        .images-container {
             display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        
-        .skill-number {
-            background-color: var(--secondary-color);
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 10px;
-            font-weight: bold;
-        }
-        
-        .importance {
-            font-weight: bold;
-            color: var(--dark-color);
-        }
-        
-        .methods {
-            margin-top: 15px;
-        }
-        
-        .methods ul {
-            padding-left: 20px;
-        }
-        
-        .methods li {
-            margin-bottom: 8px;
-            position: relative;
-        }
-        
-        .methods li:before {
-            content: "•";
-            color: var(--secondary-color);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
         }
         
         footer {
@@ -226,17 +134,8 @@
         }
         
         @media (max-width: 768px) {
-            .soft-skills-container {
+            .avis-container {
                 padding: 15px;
-            }
-            
-            .soft-skills-container h1 {
-                font-size: 2rem;
-            }
-            
-            table {
-                display: block;
-                overflow-x: auto;
             }
             
             header {
@@ -253,6 +152,14 @@
                 display: inline-block;
                 margin: 5px 10px;
             }
+            
+            .images-container {
+                flex-direction: column;
+            }
+            
+            .company-logo {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -267,7 +174,8 @@
         <a href="#">Accueil</a>
         <a href="#">Optimisation LinkedIn</a>
         <a href="#">Recherche de Stage</a>
-        <a href="#soft-skills">Soft Skills</a>
+        <a href="#">Soft Skills</a>
+        <a href="#avis-suggestions">Avis</a>
         <a href="#">Contact</a>
     </nav>
     <a class="btn-login" href="#">Se connecter</a>
@@ -276,336 +184,73 @@
 <section class="hero">
     <h1>Votre Pont vers l'Excellence Professionnelle</h1>
     <p>Notre plateforme transforme votre recherche de stage en parcours de développement complet, intégrant les soft skills directement dans votre préparation.</p>
-    <a href="#soft-skills" class="btn-primary">Commencer mon parcours</a>
+    <a href="#avis-suggestions" class="btn-primary">Découvrir les avis</a>
 </section>
 
-<section id="soft-skills" class="soft-skills-container">
-    <h1>Plan de Développement des Compétences</h1>
-    
-    <div class="plan-section">
-        <div class="week-section">
-            <div class="week-header">
-                <h3>SEMAINE 1 : Gestion de soi et pensée critique</h3>
-            </div>
-            <div class="week-objective">
-                <p>Objectif : Développer le contrôle de ton temps, de tes pensées et de ton processus d'apprentissage.</p>
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Jour</th>
-                        <th>Compétence</th>
-                        <th>Activité</th>
-                        <th>Ressources</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Lundi</td>
-                        <td>Gestion du temps</td>
-                        <td>Créer un planning hebdomadaire avec blocs de temps pour les études, projets et temps personnel</td>
-                        <td>Application de planification (Google Calendar, Notion)</td>
-                    </tr>
-                    <tr>
-                        <td>Mardi</td>
-                        <td>Auto-évaluation</td>
-                        <td>Identifier tes forces et faiblesses académiques et personnelles</td>
-                        <td>Test d'auto-évaluation, journal de réflexion</td>
-                    </tr>
-                    <tr>
-                        <td>Mercredi</td>
-                        <td>Pensée critique</td>
-                        <td>Analyser un problème complexe et identifier au moins 3 solutions possibles</td>
-                        <td>Études de cas, problèmes de logique</td>
-                    </tr>
-                    <tr>
-                        <td>Jeudi</td>
-                        <td>Résolution de problèmes</td>
-                        <td>Appliquer une méthodologie structurée à un défi technique</td>
-                        <td>Méthodologie de résolution de problèmes, exercices pratiques</td>
-                    </tr>
-                    <tr>
-                        <td>Vendredi</td>
-                        <td>Rétroaction</td>
-                        <td>Demander et recevoir des feedbacks constructifs sur ton travail</td>
-                        <td>Formulaire de feedback, séance de revue par les pairs</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="week-section">
-            <div class="week-header">
-                <h3>SEMAINE 2 : Communication et collaboration</h3>
-            </div>
-            <div class="week-objective">
-                <p>Objectif : Améliorer tes capacités à communiquer clairement et à travailler efficacement en équipe.</p>
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Jour</th>
-                        <th>Compétence</th>
-                        <th>Activité</th>
-                        <th>Ressources</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Lundi</td>
-                        <td>Communication écrite</td>
-                        <td>Rédiger un email professionnel clair et concis</td>
-                        <td>Modèles d'emails professionnels, guide de rédaction</td>
-                    </tr>
-                    <tr>
-                        <td>Mardi</td>
-                        <td>Communication verbale</td>
-                        <td>Présenter une idée en 3 minutes avec support visuel</td>
-                        <td>Techniques de présentation, outils de création de slides</td>
-                    </tr>
-                    <tr>
-                        <td>Mercredi</td>
-                        <td>Écoute active</td>
-                        <td>Pratiquer l'écoute active dans une conversation de groupe</td>
-                        <td>Exercices d'écoute active, jeux de rôle</td>
-                    </tr>
-                    <tr>
-                        <td>Jeudi</td>
-                        <td>Travail d'équipe</td>
-                        <td>Participer à un projet collaboratif avec répartition des tâches</td>
-                        <td>Outils de collaboration (Trello, Slack), méthodologies agiles</td>
-                    </tr>
-                    <tr>
-                        <td>Vendredi</td>
-                        <td>Gestion de conflits</td>
-                        <td>Identifier et résoudre un désaccord dans un contexte professionnel</td>
-                        <td>Études de cas, techniques de médiation</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="week-section">
-            <div class="week-header">
-                <h3>SEMAINE 3 : Adaptabilité et innovation</h3>
-            </div>
-            <div class="week-objective">
-                <p>Objectif : Développer ta capacité à t'adapter au changement et à proposer des solutions innovantes.</p>
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Jour</th>
-                        <th>Compétence</th>
-                        <th>Activité</th>
-                        <th>Ressources</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Lundi</td>
-                        <td>Flexibilité cognitive</td>
-                        <td>Résoudre un problème sous au moins deux angles différents</td>
-                        <td>Exercices de pensée latérale, jeux de créativité</td>
-                    </tr>
-                    <tr>
-                        <td>Mardi</td>
-                        <td>Apprentissage continu</td>
-                        <td>Identifier et commencer à apprendre une nouvelle compétence technique</td>
-                        <td>Plateformes d'apprentissage en ligne, tutoriels</td>
-                    </tr>
-                    <tr>
-                        <td>Mercredi</td>
-                        <td>Gestion du changement</td>
-                        <td>Analyser comment tu réagis face à un changement imprévu</td>
-                        <td>Questionnaire d'adaptabilité, réflexion personnelle</td>
-                    </tr>
-                    <tr>
-                        <td>Jeudi</td>
-                        <td>Pensée innovante</td>
-                        <td>Proposer une amélioration innovante pour un processus existant</td>
-                        <td>Techniques de brainstorming, design thinking</td>
-                    </tr>
-                    <tr>
-                        <td>Vendredi</td>
-                        <td>Résilience</td>
-                        <td>Identifier des stratégies pour rebondir après un échec</td>
-                        <td>Histoires de résilience, techniques de développement personnel</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    
-    <!-- Section Compétences Clés ajoutée ici -->
-    <div class="key-skills-container">
-        <h2>Développement des Compétences Clés</h2>
+<section id="avis-suggestions" class="container">
+    <div class="avis-container">
+        <h2 class="section-title">Avis et suggestions</h2>
         
-        <div class="intro">
-            <p>Dans le monde professionnel actuel, posséder des compétences techniques ne suffit plus. Le développement des soft skills, ou compétences comportementales, est essentiel pour s'adapter, collaborer efficacement et réussir dans tous les domaines. Ce guide présente les compétences clés à développer et des méthodes concrètes pour les renforcer au quotidien.</p>
-        </div>
+        <p>Concernant les stages on peut suggérer à vous plusieurs entreprises à déposer votre CV et autres sites web où vous pouvez chercher des stages dans votre filière de data science ou de Cybersécurité.</p>
         
-        <h3>Compétences Clés</h3>
-        
-        <div class="skill-section">
-            <div class="skill-title">
-                <div class="skill-number">1</div>
-                <h3>Pensée Critique</h3>
-            </div>
-            <p class="importance">Importance : Permet d'analyser l'information de manière objective, d'évaluer les preuves et de prendre des décisions raisonnées.</p>
-            <div class="methods">
-                <p><strong>Méthodes de Développement :</strong></p>
-                <ul>
-                    <li>Participer à des débats ou discussions qui remettent en question vos points de vue.</li>
-                    <li>Analyser des problèmes réels et identifier les erreurs logiques dans les arguments.</li>
-                    <li>Lire des articles analytiques et résumer leurs points clés et hypothèses.</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="skill-section">
-            <div class="skill-title">
-                <div class="skill-number">2</div>
-                <h3>Communication</h3>
-            </div>
-            <p class="importance">Importance : Une communication efficace permet de transmettre et de faire comprendre clairement les idées, à l'écrit comme à l'oral.</p>
-            <div class="methods">
-                <p><strong>Méthodes de Développement :</strong></p>
-                <ul>
-                    <li>Pratiquer régulièrement la prise de parole en public et les présentations.</li>
-                    <li>Enregistrer et revoir vos communications pour identifier les axes d'amélioration.</li>
-                    <li>Lire des matériaux variés pour enrichir votre vocabulaire et votre style d'expression.</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="skill-section">
-            <div class="skill-title">
-                <div class="skill-number">3</div>
-                <h3>Travail d'Équipe</h3>
-            </div>
-            <p class="importance">Importance : La collaboration augmente la productivité et favorise l'innovation grâce à la diversité des perspectives.</p>
-            <div class="methods">
-                <p><strong>Méthodes de Développement :</strong></p>
-                <ul>
-                    <li>Participer à des projets de groupe et assumer différents rôles au sein de l'équipe.</li>
-                    <li>Fournir et demander des retours constructifs pour renforcer la coopération.</li>
-                    <li>Observer des équipes performantes pour comprendre leurs stratégies de communication et de coordination.</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="skill-section">
-            <div class="skill-title">
-                <div class="skill-number">4</div>
-                <h3>Résolution de Problèmes</h3>
-            </div>
-            <p class="importance">Importance : La capacité à identifier, analyser et résoudre efficacement les problèmes est essentielle dans tout domaine professionnel.</p>
-            <div class="methods">
-                <p><strong>Méthodes de Développement :</strong></p>
-                <ul>
-                    <li>Appliquer des méthodes structurées comme l'analyse des causes profondes ou la technique des « 5 Pourquoi ».</li>
-                    <li>Travailler sur des défis pratiques, études de cas ou simulations.</li>
-                    <li>Réfléchir aux problèmes passés pour évaluer quelles stratégies ont été les plus efficaces.</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="skill-section">
-            <div class="skill-title">
-                <div class="skill-number">5</div>
-                <h3>Adaptabilité</h3>
-            </div>
-            <p class="importance">Importance : L'adaptabilité permet de rester efficace dans des environnements en évolution rapide.</p>
-            <div class="methods">
-                <p><strong>Méthodes de Développement :</strong></p>
-                <ul>
-                    <li>Se confronter régulièrement à de nouvelles expériences d'apprentissage ou technologies.</li>
-                    <li>Demander des retours après des changements ou défis pour évaluer votre réaction.</li>
-                    <li>Pratiquer la flexibilité en travaillant dans différentes conditions ou avec des équipes variées.</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="skill-section">
-            <div class="skill-title">
-                <div class="skill-number">6</div>
-                <h3>Gestion du Temps</h3>
-            </div>
-            <p class="importance">Importance : L'utilisation efficace du temps améliore la productivité et réduit le stress.</p>
-            <div class="methods">
-                <p><strong>Méthodes de Développement :</strong></p>
-                <ul>
-                    <li>Utiliser des outils comme des agendas ou applications de gestion de tâches pour prioriser le travail.</li>
-                    <li>Appliquer des techniques de gestion du temps telles que la méthode Pomodoro.</li>
-                    <li>Réfléchir chaque semaine à l'utilisation du temps et ajuster les priorités en conséquence.</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="skill-section">
-            <div class="skill-title">
-                <div class="skill-number">7</div>
-                <h3>Intelligence Émotionnelle</h3>
-            </div>
-            <p class="importance">Importance : L'intelligence émotionnelle renforce les relations interpersonnelles et soutient un leadership efficace.</p>
-            <div class="methods">
-                <p><strong>Méthodes de Développement :</strong></p>
-                <ul>
-                    <li>Pratiquer la conscience de soi en identifiant les déclencheurs et patterns émotionnels.</li>
-                    <li>Développer l'empathie par l'écoute active et la prise de perspective.</li>
-                    <li>Apprendre à réguler les émotions lors de situations stressantes grâce à la pleine conscience ou la réflexion.</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="skill-section">
-            <div class="skill-title">
-                <div class="skill-number">8</div>
-                <h3>Leadership</h3>
-            </div>
-            <p class="importance">Importance : Le leadership consiste à guider et motiver les autres vers des objectifs communs.</p>
-            <div class="methods">
-                <p><strong>Méthodes de Développement :</strong></p>
-                <ul>
-                    <li>Prendre l'initiative dans des projets, même de manière informelle.</li>
-                    <li>Étudier des modèles de leadership et appliquer les enseignements dans des contextes pratiques.</li>
-                    <li>Encourager et encadrer vos pairs pour favoriser la croissance collective.</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="skill-section">
-            <div class="skill-title">
-                <div class="skill-number">9</div>
-                <h3>Créativité</h3>
-            </div>
-            <p class="importance">Importance : La créativité stimule l'innovation et la résolution de problèmes en générant des idées originales.</p>
-            <div class="methods">
-                <p><strong>Méthodes de Développement :</strong></p>
-                <ul>
-                    <li>Expérimenter avec des techniques de brainstorming et de mind-mapping.</li>
-                    <li>Explorer des disciplines diverses pour acquérir de nouvelles perspectives.</li>
-                    <li>Se lancer des défis nécessitant une pensée non conventionnelle ou l'utilisation de ressources limitées.</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="skill-section">
-            <div class="skill-title">
-                <div class="skill-number">10</div>
-                <h3>Networking (Réseautage)</h3>
-            </div>
-            <p class="importance">Importance : Construire des relations professionnelles élargit les opportunités et le partage de connaissances.</p>
-            <div class="methods">
-                <p><strong>Méthodes de Développement :</strong></p>
-                <ul>
-                    <li>Participer à des événements, ateliers ou communautés en ligne liés à votre domaine.</li>
-                    <li>Maintenir la communication avec vos contacts via des interactions significatives.</li>
-                    <li>Offrir collaboration ou aide aux autres avant de solliciter des faveurs.</li>
-                </ul>
-            </div>
-        </div>
+        <ul class="company-list">
+            <li class="company-item">
+                <h2>1 - Office National des Chemins de Fer (ONCF)</h2>
+                <img src="media/image2.png" alt="ONCF Logo" class="company-logo">
+                <p>L'ONCF offre des nombreux stages dans différents domaines comme le data science, cybersécurité et de la logistique.</p>
+                <div class="quote">
+                    <p>D'après HAMZA (Cyber sécurité) : "Je suis ravi de rejoindre l'ONCF en tant que stagiaire en cyber sécurité. Ce stage représente une excellente opportunité pour approfondir mes connaissances en protection des systèmes d'information et contribuer à la sécurisation des infrastructures ferroviaires."</p>
+                </div>
+            </li>
+            
+            <li class="company-item">
+                <h2>2 - Inwi et Orange</h2>
+                <img src="media/image3.png" alt="Inwi et Orange Logo" class="company-logo">
+                <p>Ces entreprises offre un stage de qualité pour les étudiants talentueux dans la gestion des réseaux, cybersécurité et le commerce.</p>
+                <div class="quote">
+                    <p>D'après WISSAL (Cybersécurité) : "Je suis ravie d'annoncer mon intégration en tant que stagiaire chez inwi. Ce stage représente une opportunité unique pour approfondir mes compétences en réseaux et cybersécurité... Il me permettra d'explorer différents aspects tels que la sécurisation des infrastructures, la gestion des firewalls, l'optimisation des réseaux ..."</p>
+                </div>
+            </li>
+            
+            <li class="company-item">
+                <h2>3 - Oracle</h2>
+                <img src="media/image4.png" alt="Oracle Logo" class="company-logo">
+                <p>Oracle, qui a récemment renforcé sa présence dans le pays en inaugurant un centre de recherche et développement (R&D) à Casablanca, elle offre des stages dans des domaines de l'IA, cloud et data science.</p>
+                <div class="quote">
+                    <p>Abdjallil (1ére année à l'ESI en data science) : "J'ai eu le plaisir et la chance d'avoir un stage de qualité chez Oracle pour renforcer mes connaissances en sciences de données."</p>
+                </div>
+            </li>
+            
+            <li class="company-item">
+                <h2>4 - 3T DEVELOPPEMENT MAROC</h2>
+                <img src="media/image5.png" alt="3T Développement Logo" class="company-logo">
+                <p>3T Développement est un groupe multimarque dans le secteur de la restauration, du fitness et du retail. Depuis 2016, nous développons 10 marques sur différents segments, en France et à l'international comme O'tacos et Fitness Park.</p>
+                <p>Depuis 2022, le groupe 3T Développement déploie la marque Fitness Park, en qualité de master franchisé sur l'intégralité du Royaume du Maroc. Elle offre souvent des stages en Data science.</p>
+            </li>
+            
+            <li class="company-item">
+                <h2>5 - LOTUS CAPITAL GESTION</h2>
+                <img src="media/image6.png" alt="Lotus Capital Gestion Logo" class="company-logo">
+                <p>Lotus Capital Gestion est la première société marocaine spécialisée dans le trading quantitatif et la fintech, se concentrant sur une variété de classes d'actifs. En intégrant l'expertise de traders expérimentés, d'analystes quantitatifs et de développeurs innovants, l'entreprise utilise des technologies de pointe pour surpasser les indices de référence grâce à des stratégies basées sur l'analyse de données et des modèles quantitatifs avancés.</p>
+                <p>Lotus capital offre plusieurs stages dans Data science, cybersécurité et motion design.</p>
+            </li>
+            
+            <li class="company-item">
+                <h2>6 - Sofrecom</h2>
+                <img src="media/image7.png" alt="Sofrecom Logo" class="company-logo">
+                <p>Depuis sa création en 2000, Sofrecom Maroc s'est rapidement imposé comme un acteur clé dans le domaine des nouvelles technologies de l'information et de la communication. Grâce à ses activités variées, notamment en ingénierie logicielle, en conseil, en ingénierie de réseaux mobiles, ainsi qu'en veille technologique et concurrentielle, l'entreprise a su se démarquer sur le marché local.</p>
+                <p>Sofrecom offre des stages dans : Data science ; ingénierie radio ; ingénierie IA et développement JAVA et PHP.</p>
+            </li>
+            
+            <li class="company-item">
+                <h2>7 - Stagiaires.ma</h2>
+                <div class="images-container">
+                    <img src="media/image8.png" alt="Stagiaires.ma Logo 1" class="company-logo">
+                    <img src="media/image9.png" alt="Stagiaires.ma Logo 2" class="company-logo">
+                </div>
+                <p>Le site web "Stagaires.ma" vous offre des opportunités de recherche de stage dans votre zone de proche ou une zone précisée par vous-même, dans votre filière de plus. Elle offre des stages à jours dans des entreprises grandes ; moyennes ou une start-up.</p>
+            </li>
+        </ul>
     </div>
 </section>
 
